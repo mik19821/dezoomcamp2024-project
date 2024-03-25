@@ -1,6 +1,6 @@
 # DEZoomcamp2024-project
 
-##README PL 
+## README PL 
 
 Info: Pobieranie statystyk dla każdego parku ze strony spcff. Informacje odnośnie aktywacji łowców.
 - kto i kiedy aktywował
