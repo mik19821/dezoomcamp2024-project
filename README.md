@@ -1,1 +1,1 @@
-# dezoomcamp2024-project
+# DEzoomcamp2024-project
