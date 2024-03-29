@@ -26,10 +26,10 @@ Set structure:
 - [x] script getting data statistics (one csv file for each object)
 - [ ] create parquet file from csv
 2. Import and transformation
-- [ ] import file to container with postgresql (v15)
+- [X] import file to container with postgresql (v15)
   - transformation:
-    - [ ] activation's date to date format
-    - [ ] change callsign to uppercase
+    - [X] activation's date to date format
+    - [X] change callsign to uppercase
 - [ ] copy file to gcs
 - [ ] import file to BigQuery
   - transformation:

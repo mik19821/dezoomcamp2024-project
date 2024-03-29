@@ -1,0 +1,2 @@
+with dane as (select split_part(znak,'/',1),sum(qso) qsos from spff_stat group by split_part(znak,'/',1) order by 2 desc limit 50) select row_number() over (order by qsos desc), * from dane;
+select split_part(znak,'/',1) as call,sum(qso) as qsos from spff_stat group by split_part(znak,'/',1) order by 2 desc limit 50;
