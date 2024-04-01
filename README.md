@@ -37,7 +37,7 @@ Spcff.pl is the website of the Polish WWFF diploma program. This is a register o
 
 requirements (Mage - io_config.yml):
 ``` 
-  GOOGLE_SERVICE_ACC_KEY_FILEPATH: "/home/src/valued-bastion-411614-99b5bae0865e.json"
+  GOOGLE_SERVICE_ACC_KEY_FILEPATH: "/home/src/key.json"
   GOOGLE_LOCATION: US # Optional
 ```
 
