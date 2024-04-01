@@ -35,6 +35,12 @@ Spcff.pl is the website of the Polish WWFF diploma program. This is a register o
 1. Data set was convert to .parquet files. After that I've  sent them to GCS and export to Biq Query. 
 2. For optimization purposes, I used partitioning by year.
 
+requirements (Mage - io_config.yml):
+``` 
+  GOOGLE_SERVICE_ACC_KEY_FILEPATH: "/home/src/valued-bastion-411614-99b5bae0865e.json"
+  GOOGLE_LOCATION: US # Optional
+```
+
 
 
 

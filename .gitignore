@@ -1,4 +1,6 @@
 .git
 .idea
 .env
+.credentials
+data
 get_data_spff.py
