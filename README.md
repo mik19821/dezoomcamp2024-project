@@ -8,16 +8,34 @@ language: [English](README.md) also available in:
 
 # DEZoomcamp2024-project
 
-### Data set
-Data get from the web site (spcff). This is statistic for HAM operator about Flora&Fauna activation. A set can not be 
-download directly. I used python script and MenicalSoup library for web scraping (https://mechanicalsoup.readthedocs.io/en/stable/tutorial.html). 
-It's simple to use but I can't share because security reason. Just add 2680 csv [files](https://github.com/mik19821/dezoomcamp2024-project/tree/main/data) to this repo.
+### Description
+Spcff.pl is the website of the Polish WWFF diploma program. This is a register of all activities of Polish flora&fauna. Oporeators, I mean Hunters or HAM Amateur send QSO's log from SPFF objects to the register. On the website you can check who, when and how many connections were made. Due to the fact that these are only dry data and Guest should to that manually. I decided to download them automatically and visualize them so that the summaries were concentrated in one place and in a more readable form. The initial data download and export to PostgreSQL was performed on a local environment using Docker and Mage AI. Simple transformation data was made by Mage. The scripts have been included in the repository.
 
-Set structure:
+
+#### Data set structure:
+```
 - ID of object (SPFF-DDDD)
 - date of activation (YYYYMMDD)
 - HAM callsign (SQ7M)
-- number of QSO - connection with other operators (integer)
+- number of QSO - connection to other HAM operators (integer)
+```
+
+## Local
+
+*Files:*
+1. Dockerfile
+2. docker-compose.yml 
+3. mage-pipelines
+   - project_spff_loader.py
+   - project_spff_transform.py
+   - project_spff_exporter2pg.py
+
+
+## GCS and Big Query
+1. Data set was convert to .parquet files. After that I've  sent them to GCS and export to Biq Query. 
+2. For optimization purposes, I used partitioning by year.
+
+
 
 
 

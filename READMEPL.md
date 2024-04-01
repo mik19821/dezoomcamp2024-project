@@ -48,8 +48,15 @@ Google Data Studio oferuje szeroki zakres funkcji i możliwości dostosowania, c
   - aktywatorzy: porównanie QSO (rok do roku)
   - łowcy: top 10 (rok po roku 3 lata wstecz)
   - wykres ciasteczkowy z informacją o NEW ONE
+```
 
 #### TODO:
 - pobieranie statystyk dla danego obiektu jeśli w odebranych logach pojawi się on z adnotacją, że został dodany
-- wymyślić sposób użycia dla GreatExpectation
+- wymyślić sposób użycia dla GreatExpectationSpcff.pl to strona polskiego programu WWFF. Jest główny rejestr aktywności krótkofalarskich polegających 
 - użyć w python .env oraz pip install -f requirements
+
+#### OPIS
+Spcff.pl to strona polskiego programu dyplomowego WWFF. Znajduje się tu rejest wszystkich aktywności polskich obiektów SPFF. Oporeatorzy (Hunter) przesyłają do rejestru logi (dzienniki) łączności nawiązanych z obiektów SPFF. Na stronie można sprawdzić, kto, kiedy i ile łączności nawiązał. W związku z tym, że są to jedynie suche dane postanowiłem je pobrać automatem i zwizualizować tak by podsumowania były skoncentrowane w jednym miejscu i bardziej przystępnej formie.
+Początkowe pobranie danych oraz export do PostgreSQL został wykonany na środowisku lokalnym przy użyciu Docker jak i Mage AI. Skrypty zostały dołączone do repozytorium z dopiskiem "*-local*".
+
+Drugim jest wygenerowanie plików .parquet, umieszczenie na GCS oraz export do Biq Query. W celu optymalizacji zastosowałem partycjonowanie po roku.
