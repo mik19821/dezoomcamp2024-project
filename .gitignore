@@ -2,5 +2,6 @@
 .idea
 .env
 .credentials
+.private
 data
 get_data_spff.py

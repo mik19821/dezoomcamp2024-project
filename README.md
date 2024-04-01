@@ -35,28 +35,55 @@ Spcff.pl is the website of the Polish WWFF diploma program. This is a register o
 1. Data set was convert to .parquet files. After that I've  sent them to GCS and export to Biq Query. 
 2. For optimization purposes, I used partitioning by year.
 
-requirements (Mage - io_config.yml):
+
+
+To process data in Mage:
+1. Create loader to load data from csv from github
+2. Create transform to change format date and upper case
+3. Create exporter to parquet file
+4. Create exporter to GCS
+
+#### Files:
+- project_spff_loader.py
+- project_spff_transform.py
+- project_spff_partition_parquet_exporter.py
+- project_spff_exporter2gcs.py
+
+**!NOTE:** To add gcs credential. [Matt Palmer - How to](https://www.youtube.com/watch?v=w0XmcASRUnc&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=25)
 ``` 
   GOOGLE_SERVICE_ACC_KEY_FILEPATH: "/home/src/key.json"
   GOOGLE_LOCATION: US # Optional
 ```
 
 
+### Next step ... visualization and analysis.
 
+[//]: # (#### TODO:)
 
+[//]: # (1. Get dataset)
 
-#### TODO:
-1. Get dataset
-- [x] script getting data statistics (one csv file for each object)
-- [ ] create parquet file from csv
-2. Import and transformation
-- [X] import file to container with postgresql (v15)
-  - transformation:
-    - [X] activation's date to date format
-    - [X] change callsign to uppercase
-- [ ] copy file to gcs
-- [ ] import file to BigQuery
-  - transformation:
-    - [ ] activation's date to date format
-    - [ ] change callsign to uppercase
-3. create dashboards
+[//]: # (- [x] script getting data statistics &#40;one csv file for each object&#41;)
+
+[//]: # (- [ ] create parquet file from csv)
+
+[//]: # (2. Import and transformation)
+
+[//]: # (- [X] import file to container with postgresql &#40;v15&#41;)
+
+[//]: # (  - transformation:)
+
+[//]: # (    - [X] activation's date to date format)
+
+[//]: # (    - [X] change callsign to uppercase)
+
+[//]: # (- [ ] copy file to gcs)
+
+[//]: # (- [ ] import file to BigQuery)
+
+[//]: # (  - transformation:)
+
+[//]: # (    - [ ] activation's date to date format)
+
+[//]: # (    - [ ] change callsign to uppercase)
+
+[//]: # (3. create dashboards)
