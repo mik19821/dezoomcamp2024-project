@@ -39,7 +39,7 @@ Spcff.pl is the website of the Polish WWFF diploma program. This is a register o
 
 To process data in Mage:
 1. Create loader to load data from csv from github
-2. Create transform to change format date, rok(year) and upper case for znak (columns)
+2. Create transform to change format date, rok (year) and upper case for znak (callsign operator)
 3. Create exporter to parquet file
 4. Create external and static table from *.parquet
 4. Write in Big Query
@@ -49,7 +49,7 @@ To process data in Mage:
 2. mage-cloud/transformers/project_spff_transform.py
 3. mage-cloud/data_exporters/parquet4gcsandgq.py
 4. mage-cloud/transformers/project_spff_stat_from_ext_table.sql
-- mage-cloud/data_exporters/project_spff_wrtie2bq.sql
+5. mage-cloud/data_exporters/project_spff_wrtie2bq.sql
 
 **!!! There is possible to create external table from created parquet file. If you want just use a parquet4gcsandgq.py and after that project_spff_stat_from_ext_table.sql.** 
 
