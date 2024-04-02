@@ -25,10 +25,10 @@ Spcff.pl is the website of the Polish WWFF diploma program. This is a register o
 *Files:*
 1. Dockerfile
 2. docker-compose.yml 
-3. mage-pipelines
-   - project_spff_loader.py
-   - project_spff_transform.py
-   - project_spff_exporter2pg.py
+3. mage-local
+   - mage-local/data_loaders/project_spff_loader.py
+   - mage-local/transformers/project_spff_transform.py
+   - mage-local/data_exporters/project_spff_exporter2pg.py
 
 
 ## GCS and Big Query
@@ -39,15 +39,19 @@ Spcff.pl is the website of the Polish WWFF diploma program. This is a register o
 
 To process data in Mage:
 1. Create loader to load data from csv from github
-2. Create transform to change format date and upper case
+2. Create transform to change format date, rok(year) and upper case for znak (columns)
 3. Create exporter to parquet file
-4. Create exporter to GCS
+4. Create external and static table from *.parquet
+4. Write in Big Query
 
 #### Files:
-- project_spff_loader.py
-- project_spff_transform.py
-- project_spff_partition_parquet_exporter.py
-- project_spff_exporter2gcs.py
+1. mage-cloud/data_loaders/project_spff_loader.py
+2. mage-cloud/transformers/project_spff_transform.py
+3. mage-cloud/data_exporters/parquet4gcsandgq.py
+4. mage-cloud/transformers/project_spff_stat_from_ext_table.sql
+- mage-cloud/data_exporters/project_spff_wrtie2bq.sql
+
+**!!! There is possible to create external table from created parquet file. If you want just use a parquet4gcsandgq.py and after that project_spff_stat_from_ext_table.sql.** 
 
 **!NOTE:** To add gcs credential. [Matt Palmer - How to](https://www.youtube.com/watch?v=w0XmcASRUnc&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=25)
 ``` 
@@ -56,7 +60,7 @@ To process data in Mage:
 ```
 
 
-### Next step ... visualization and analysis.
+### Next step ... visualization and analysis. This will be piece of cake because all of data is here.
 
 [//]: # (#### TODO:)
 
