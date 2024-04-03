@@ -60,9 +60,9 @@ To process data in Mage:
 ```
 
 
-### Next step ... visualization and analysis. This will be piece of cake because all of data is here.
 
-First charts made by Data/Look Studio.
+
+## First charts made by Data/Look Studio.
 ![Charts01](https://github.com/mik19821/dezoomcamp2024-project/blob/main/img/multichart01.png)
 
 [//]: # (#### TODO:)
