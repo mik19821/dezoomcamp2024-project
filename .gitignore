@@ -3,5 +3,4 @@
 .env
 .credentials
 .private
-data/old
 get_data_spff.py
