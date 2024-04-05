@@ -54,8 +54,7 @@ Spcff.pl is the website of the Polish WWFF diploma program. This is a register o
 - there is to option to use exporter:
   - [project_spff_wrtie2bq.sql](https://github.com/mik19821/dezoomcamp2024-project/blob/main/mage-cloud/data_exporters/project_spff_wrtie2bq.sql) - export DataFrame to Big Query directly. Data set is patition by column rok because this is the most optimize   
   ![Partitioning](https://github.com/mik19821/dezoomcamp2024-project/blob/main/img/partitioning.png) 
-  - [parquet4gcsandgq.py](https://github.com/mik19821/dezoomcamp2024-project/blob/main/mage-cloud/data_exporters/parquet4gcsandgq.py) - export parquet file to GCS and after that we can create external and static table using transformer  
-  [project_spff_stat_from_ext_table.sql](https://github.com/mik19821/dezoomcamp2024-project/blob/main/mage-cloud/transformers/project_spff_stat_from_ext_table.sql). 
+  - [parquet4gcsandgq.py](https://github.com/mik19821/dezoomcamp2024-project/blob/main/mage-cloud/data_exporters/parquet4gcsandgq.py) - export parquet file to GCS and after that we can create external and static table using transformer [project_spff_stat_from_ext_table.sql](https://github.com/mik19821/dezoomcamp2024-project/blob/main/mage-cloud/transformers/project_spff_stat_from_ext_table.sql). 
 
 
 [//]: # (#### Files:)
