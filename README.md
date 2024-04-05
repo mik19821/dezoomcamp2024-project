@@ -79,7 +79,7 @@ Spcff.pl is the website of the Polish WWFF diploma program. This is a register o
 
 
 
-## First charts made by Data/Look Studio.
+## First charts made by Data/Look Studio -> [link](https://lookerstudio.google.com/s/iMUVwbUlJrk).
 ![Charts01](https://github.com/mik19821/dezoomcamp2024-project/blob/main/img/multichart01.png)
 
 
