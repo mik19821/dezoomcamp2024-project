@@ -48,7 +48,7 @@ Spcff.pl is the website of the Polish WWFF diploma program. This is a register o
 
 ## GCS and Big Query
 
-**Step 1.** In the previous instance of Mage create new pipeline.
+**In the previous instance of Mage create new pipeline.**
 - use the same code for [loader](https://github.com/mik19821/dezoomcamp2024-project/blob/main/mage-cloud/data_loaders/project_spff_loader.py) because this file is responsible for load data from the csv file
 - as above transformer file can be reused without any changes. [Transformer](https://github.com/mik19821/dezoomcamp2024-project/blob/main/mage-local/transformers/project_spff_transform.py) change format date, rok (year) and upper case for znak (callsign operator)
 - there is to option to use exporter:
